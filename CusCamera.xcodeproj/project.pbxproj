@@ -1,0 +1,678 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5C4201D42435906800853506 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C4201D32435906800853506 /* AppDelegate.m */; };
+		5C4201D72435906800853506 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C4201D62435906800853506 /* SceneDelegate.m */; };
+		5C4201DA2435906800853506 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C4201D92435906800853506 /* ViewController.m */; };
+		5C4201DD2435906800853506 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C4201DB2435906800853506 /* Main.storyboard */; };
+		5C4201DF2435906A00853506 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C4201DE2435906A00853506 /* Assets.xcassets */; };
+		5C4201E22435906A00853506 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C4201E02435906A00853506 /* LaunchScreen.storyboard */; };
+		5C4201E52435906B00853506 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C4201E42435906B00853506 /* main.m */; };
+		5C4201EF2435906B00853506 /* CusCameraTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C4201EE2435906B00853506 /* CusCameraTests.m */; };
+		5C4201FA2435906B00853506 /* CusCameraUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C4201F92435906B00853506 /* CusCameraUITests.m */; };
+		5C420228243590B600853506 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C420210243590B600853506 /* NSLayoutConstraint+MASDebugAdditions.m */; };
+		5C420229243590B600853506 /* ViewController+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C420219243590B600853506 /* ViewController+MASAdditions.m */; };
+		5C42022A243590B600853506 /* MASCompositeConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C42021D243590B600853506 /* MASCompositeConstraint.m */; };
+		5C42022B243590B600853506 /* MASConstraintMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C42021E243590B600853506 /* MASConstraintMaker.m */; };
+		5C42022C243590B600853506 /* MASLayoutConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C42021F243590B600853506 /* MASLayoutConstraint.m */; };
+		5C42022D243590B600853506 /* NSArray+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C420220243590B600853506 /* NSArray+MASAdditions.m */; };
+		5C42022E243590B600853506 /* View+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C420221243590B600853506 /* View+MASAdditions.m */; };
+		5C42022F243590B600853506 /* MASConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C420224243590B600853506 /* MASConstraint.m */; };
+		5C420230243590B600853506 /* MASViewConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C420226243590B600853506 /* MASViewConstraint.m */; };
+		5C420231243590B600853506 /* MASViewAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C420227243590B600853506 /* MASViewAttribute.m */; };
+		5C4202352435C77300853506 /* FJCameraView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C4202342435C77300853506 /* FJCameraView.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5C4201EB2435906B00853506 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5C4201C72435906800853506 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5C4201CE2435906800853506;
+			remoteInfo = CusCamera;
+		};
+		5C4201F62435906B00853506 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5C4201C72435906800853506 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5C4201CE2435906800853506;
+			remoteInfo = CusCamera;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		5C4201CF2435906800853506 /* CusCamera.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CusCamera.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5C4201D22435906800853506 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		5C4201D32435906800853506 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		5C4201D52435906800853506 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
+		5C4201D62435906800853506 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
+		5C4201D82435906800853506 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		5C4201D92435906800853506 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		5C4201DC2435906800853506 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5C4201DE2435906A00853506 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5C4201E12435906A00853506 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5C4201E32435906B00853506 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5C4201E42435906B00853506 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5C4201EA2435906B00853506 /* CusCameraTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CusCameraTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5C4201EE2435906B00853506 /* CusCameraTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CusCameraTests.m; sourceTree = "<group>"; };
+		5C4201F02435906B00853506 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5C4201F52435906B00853506 /* CusCameraUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CusCameraUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5C4201F92435906B00853506 /* CusCameraUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CusCameraUITests.m; sourceTree = "<group>"; };
+		5C4201FB2435906B00853506 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5C42020F243590B600853506 /* MASCompositeConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASCompositeConstraint.h; sourceTree = "<group>"; };
+		5C420210243590B600853506 /* NSLayoutConstraint+MASDebugAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSLayoutConstraint+MASDebugAdditions.m"; sourceTree = "<group>"; };
+		5C420211243590B600853506 /* MASConstraint+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MASConstraint+Private.h"; sourceTree = "<group>"; };
+		5C420212243590B600853506 /* MASLayoutConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASLayoutConstraint.h; sourceTree = "<group>"; };
+		5C420213243590B600853506 /* NSArray+MASShorthandAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+MASShorthandAdditions.h"; sourceTree = "<group>"; };
+		5C420214243590B600853506 /* MASConstraintMaker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASConstraintMaker.h; sourceTree = "<group>"; };
+		5C420215243590B600853506 /* View+MASAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "View+MASAdditions.h"; sourceTree = "<group>"; };
+		5C420216243590B600853506 /* NSArray+MASAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+MASAdditions.h"; sourceTree = "<group>"; };
+		5C420217243590B600853506 /* MASUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASUtilities.h; sourceTree = "<group>"; };
+		5C420218243590B600853506 /* MASViewAttribute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASViewAttribute.h; sourceTree = "<group>"; };
+		5C420219243590B600853506 /* ViewController+MASAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ViewController+MASAdditions.m"; sourceTree = "<group>"; };
+		5C42021A243590B600853506 /* MASViewConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASViewConstraint.h; sourceTree = "<group>"; };
+		5C42021B243590B600853506 /* MASConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASConstraint.h; sourceTree = "<group>"; };
+		5C42021C243590B600853506 /* NSLayoutConstraint+MASDebugAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSLayoutConstraint+MASDebugAdditions.h"; sourceTree = "<group>"; };
+		5C42021D243590B600853506 /* MASCompositeConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASCompositeConstraint.m; sourceTree = "<group>"; };
+		5C42021E243590B600853506 /* MASConstraintMaker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASConstraintMaker.m; sourceTree = "<group>"; };
+		5C42021F243590B600853506 /* MASLayoutConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASLayoutConstraint.m; sourceTree = "<group>"; };
+		5C420220243590B600853506 /* NSArray+MASAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+MASAdditions.m"; sourceTree = "<group>"; };
+		5C420221243590B600853506 /* View+MASAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "View+MASAdditions.m"; sourceTree = "<group>"; };
+		5C420222243590B600853506 /* View+MASShorthandAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "View+MASShorthandAdditions.h"; sourceTree = "<group>"; };
+		5C420223243590B600853506 /* Masonry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Masonry.h; sourceTree = "<group>"; };
+		5C420224243590B600853506 /* MASConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASConstraint.m; sourceTree = "<group>"; };
+		5C420225243590B600853506 /* ViewController+MASAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ViewController+MASAdditions.h"; sourceTree = "<group>"; };
+		5C420226243590B600853506 /* MASViewConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASViewConstraint.m; sourceTree = "<group>"; };
+		5C420227243590B600853506 /* MASViewAttribute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASViewAttribute.m; sourceTree = "<group>"; };
+		5C4202332435C77300853506 /* FJCameraView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FJCameraView.h; sourceTree = "<group>"; };
+		5C4202342435C77300853506 /* FJCameraView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FJCameraView.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5C4201CC2435906800853506 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5C4201E72435906B00853506 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5C4201F22435906B00853506 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5C4201C62435906800853506 = {
+			isa = PBXGroup;
+			children = (
+				5C4201D12435906800853506 /* CusCamera */,
+				5C4201ED2435906B00853506 /* CusCameraTests */,
+				5C4201F82435906B00853506 /* CusCameraUITests */,
+				5C4201D02435906800853506 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5C4201D02435906800853506 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5C4201CF2435906800853506 /* CusCamera.app */,
+				5C4201EA2435906B00853506 /* CusCameraTests.xctest */,
+				5C4201F52435906B00853506 /* CusCameraUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5C4201D12435906800853506 /* CusCamera */ = {
+			isa = PBXGroup;
+			children = (
+				5C4202322435C75500853506 /* FJCamera */,
+				5C42020E243590B600853506 /* Masonry */,
+				5C4201D22435906800853506 /* AppDelegate.h */,
+				5C4201D32435906800853506 /* AppDelegate.m */,
+				5C4201D52435906800853506 /* SceneDelegate.h */,
+				5C4201D62435906800853506 /* SceneDelegate.m */,
+				5C4201D82435906800853506 /* ViewController.h */,
+				5C4201D92435906800853506 /* ViewController.m */,
+				5C4201DB2435906800853506 /* Main.storyboard */,
+				5C4201DE2435906A00853506 /* Assets.xcassets */,
+				5C4201E02435906A00853506 /* LaunchScreen.storyboard */,
+				5C4201E32435906B00853506 /* Info.plist */,
+				5C4201E42435906B00853506 /* main.m */,
+			);
+			path = CusCamera;
+			sourceTree = "<group>";
+		};
+		5C4201ED2435906B00853506 /* CusCameraTests */ = {
+			isa = PBXGroup;
+			children = (
+				5C4201EE2435906B00853506 /* CusCameraTests.m */,
+				5C4201F02435906B00853506 /* Info.plist */,
+			);
+			path = CusCameraTests;
+			sourceTree = "<group>";
+		};
+		5C4201F82435906B00853506 /* CusCameraUITests */ = {
+			isa = PBXGroup;
+			children = (
+				5C4201F92435906B00853506 /* CusCameraUITests.m */,
+				5C4201FB2435906B00853506 /* Info.plist */,
+			);
+			path = CusCameraUITests;
+			sourceTree = "<group>";
+		};
+		5C42020E243590B600853506 /* Masonry */ = {
+			isa = PBXGroup;
+			children = (
+				5C42020F243590B600853506 /* MASCompositeConstraint.h */,
+				5C420210243590B600853506 /* NSLayoutConstraint+MASDebugAdditions.m */,
+				5C420211243590B600853506 /* MASConstraint+Private.h */,
+				5C420212243590B600853506 /* MASLayoutConstraint.h */,
+				5C420213243590B600853506 /* NSArray+MASShorthandAdditions.h */,
+				5C420214243590B600853506 /* MASConstraintMaker.h */,
+				5C420215243590B600853506 /* View+MASAdditions.h */,
+				5C420216243590B600853506 /* NSArray+MASAdditions.h */,
+				5C420217243590B600853506 /* MASUtilities.h */,
+				5C420218243590B600853506 /* MASViewAttribute.h */,
+				5C420219243590B600853506 /* ViewController+MASAdditions.m */,
+				5C42021A243590B600853506 /* MASViewConstraint.h */,
+				5C42021B243590B600853506 /* MASConstraint.h */,
+				5C42021C243590B600853506 /* NSLayoutConstraint+MASDebugAdditions.h */,
+				5C42021D243590B600853506 /* MASCompositeConstraint.m */,
+				5C42021E243590B600853506 /* MASConstraintMaker.m */,
+				5C42021F243590B600853506 /* MASLayoutConstraint.m */,
+				5C420220243590B600853506 /* NSArray+MASAdditions.m */,
+				5C420221243590B600853506 /* View+MASAdditions.m */,
+				5C420222243590B600853506 /* View+MASShorthandAdditions.h */,
+				5C420223243590B600853506 /* Masonry.h */,
+				5C420224243590B600853506 /* MASConstraint.m */,
+				5C420225243590B600853506 /* ViewController+MASAdditions.h */,
+				5C420226243590B600853506 /* MASViewConstraint.m */,
+				5C420227243590B600853506 /* MASViewAttribute.m */,
+			);
+			path = Masonry;
+			sourceTree = "<group>";
+		};
+		5C4202322435C75500853506 /* FJCamera */ = {
+			isa = PBXGroup;
+			children = (
+				5C4202332435C77300853506 /* FJCameraView.h */,
+				5C4202342435C77300853506 /* FJCameraView.m */,
+			);
+			path = FJCamera;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5C4201CE2435906800853506 /* CusCamera */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5C4201FE2435906B00853506 /* Build configuration list for PBXNativeTarget "CusCamera" */;
+			buildPhases = (
+				5C4201CB2435906800853506 /* Sources */,
+				5C4201CC2435906800853506 /* Frameworks */,
+				5C4201CD2435906800853506 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CusCamera;
+			productName = CusCamera;
+			productReference = 5C4201CF2435906800853506 /* CusCamera.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5C4201E92435906B00853506 /* CusCameraTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5C4202012435906B00853506 /* Build configuration list for PBXNativeTarget "CusCameraTests" */;
+			buildPhases = (
+				5C4201E62435906B00853506 /* Sources */,
+				5C4201E72435906B00853506 /* Frameworks */,
+				5C4201E82435906B00853506 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5C4201EC2435906B00853506 /* PBXTargetDependency */,
+			);
+			name = CusCameraTests;
+			productName = CusCameraTests;
+			productReference = 5C4201EA2435906B00853506 /* CusCameraTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		5C4201F42435906B00853506 /* CusCameraUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5C4202042435906B00853506 /* Build configuration list for PBXNativeTarget "CusCameraUITests" */;
+			buildPhases = (
+				5C4201F12435906B00853506 /* Sources */,
+				5C4201F22435906B00853506 /* Frameworks */,
+				5C4201F32435906B00853506 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5C4201F72435906B00853506 /* PBXTargetDependency */,
+			);
+			name = CusCameraUITests;
+			productName = CusCameraUITests;
+			productReference = 5C4201F52435906B00853506 /* CusCameraUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5C4201C72435906800853506 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = rocky;
+				TargetAttributes = {
+					5C4201CE2435906800853506 = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+					5C4201E92435906B00853506 = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = 5C4201CE2435906800853506;
+					};
+					5C4201F42435906B00853506 = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = 5C4201CE2435906800853506;
+					};
+				};
+			};
+			buildConfigurationList = 5C4201CA2435906800853506 /* Build configuration list for PBXProject "CusCamera" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5C4201C62435906800853506;
+			productRefGroup = 5C4201D02435906800853506 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5C4201CE2435906800853506 /* CusCamera */,
+				5C4201E92435906B00853506 /* CusCameraTests */,
+				5C4201F42435906B00853506 /* CusCameraUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5C4201CD2435906800853506 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5C4201E22435906A00853506 /* LaunchScreen.storyboard in Resources */,
+				5C4201DF2435906A00853506 /* Assets.xcassets in Resources */,
+				5C4201DD2435906800853506 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5C4201E82435906B00853506 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5C4201F32435906B00853506 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5C4201CB2435906800853506 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5C420230243590B600853506 /* MASViewConstraint.m in Sources */,
+				5C4202352435C77300853506 /* FJCameraView.m in Sources */,
+				5C42022B243590B600853506 /* MASConstraintMaker.m in Sources */,
+				5C4201DA2435906800853506 /* ViewController.m in Sources */,
+				5C420229243590B600853506 /* ViewController+MASAdditions.m in Sources */,
+				5C420228243590B600853506 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
+				5C42022A243590B600853506 /* MASCompositeConstraint.m in Sources */,
+				5C4201D42435906800853506 /* AppDelegate.m in Sources */,
+				5C42022C243590B600853506 /* MASLayoutConstraint.m in Sources */,
+				5C42022E243590B600853506 /* View+MASAdditions.m in Sources */,
+				5C42022D243590B600853506 /* NSArray+MASAdditions.m in Sources */,
+				5C4201E52435906B00853506 /* main.m in Sources */,
+				5C4201D72435906800853506 /* SceneDelegate.m in Sources */,
+				5C420231243590B600853506 /* MASViewAttribute.m in Sources */,
+				5C42022F243590B600853506 /* MASConstraint.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5C4201E62435906B00853506 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5C4201EF2435906B00853506 /* CusCameraTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5C4201F12435906B00853506 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5C4201FA2435906B00853506 /* CusCameraUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5C4201EC2435906B00853506 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5C4201CE2435906800853506 /* CusCamera */;
+			targetProxy = 5C4201EB2435906B00853506 /* PBXContainerItemProxy */;
+		};
+		5C4201F72435906B00853506 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5C4201CE2435906800853506 /* CusCamera */;
+			targetProxy = 5C4201F62435906B00853506 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		5C4201DB2435906800853506 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5C4201DC2435906800853506 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		5C4201E02435906A00853506 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5C4201E12435906A00853506 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5C4201FC2435906B00853506 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		5C4201FD2435906B00853506 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5C4201FF2435906B00853506 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = EF3UZLJ4ZY;
+				INFOPLIST_FILE = CusCamera/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = rocky.CusCamera;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5C4202002435906B00853506 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = EF3UZLJ4ZY;
+				INFOPLIST_FILE = CusCamera/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = rocky.CusCamera;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		5C4202022435906B00853506 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = CusCameraTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = rocky.CusCameraTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CusCamera.app/CusCamera";
+			};
+			name = Debug;
+		};
+		5C4202032435906B00853506 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = CusCameraTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = rocky.CusCameraTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CusCamera.app/CusCamera";
+			};
+			name = Release;
+		};
+		5C4202052435906B00853506 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = CusCameraUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = rocky.CusCameraUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = CusCamera;
+			};
+			name = Debug;
+		};
+		5C4202062435906B00853506 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = CusCameraUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = rocky.CusCameraUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = CusCamera;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5C4201CA2435906800853506 /* Build configuration list for PBXProject "CusCamera" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5C4201FC2435906B00853506 /* Debug */,
+				5C4201FD2435906B00853506 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5C4201FE2435906B00853506 /* Build configuration list for PBXNativeTarget "CusCamera" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5C4201FF2435906B00853506 /* Debug */,
+				5C4202002435906B00853506 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5C4202012435906B00853506 /* Build configuration list for PBXNativeTarget "CusCameraTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5C4202022435906B00853506 /* Debug */,
+				5C4202032435906B00853506 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5C4202042435906B00853506 /* Build configuration list for PBXNativeTarget "CusCameraUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5C4202052435906B00853506 /* Debug */,
+				5C4202062435906B00853506 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5C4201C72435906800853506 /* Project object */;
+}
