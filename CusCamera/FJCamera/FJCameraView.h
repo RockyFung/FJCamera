@@ -19,7 +19,7 @@ typedef NS_ENUM(NSInteger, FJCaptureFlashMode) {
 @interface FJCameraView : UIView
 @property (assign, nonatomic) CGRect effectiveRect;//拍摄有效区域（（可不设置，不设置则不显示遮罩层和边框）
 
-//有效区边框色，默认橘色
+//有效区边框色
 @property (nonatomic, strong) UIColor *effectiveRectBorderColor;
 
 //遮罩层颜色，默认黑色半透明
