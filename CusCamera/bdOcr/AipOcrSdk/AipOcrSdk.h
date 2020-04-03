@@ -16,9 +16,9 @@ FOUNDATION_EXPORT const unsigned char AipOcrSdkVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <AipOcrSdk/PublicHeader.h>
 
-#import <AipOcrSdk/AipGeneralVC.h>
-#import <AipOcrSdk/AipCaptureCardVC.h>
-#import <AipOcrSdk/AipOcrService.h>
+#import "AipGeneralVC.h"
+#import "AipCaptureCardVC.h"
+#import "AipOcrService.h"
 
 
 

@@ -9,7 +9,10 @@
 #import <UIKit/UIKit.h>
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
-
+/**
+ * 是否允许转向
+ */
+@property(nonatomic,assign)BOOL allowRotation;
 
 @end
 

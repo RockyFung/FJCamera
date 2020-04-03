@@ -8,162 +8,131 @@
 
 #import "ViewController.h"
 #import "Masonry.h"
-#import "FJCameraView.h"
-
-
+#import "DemoCamerVC.h"
+#import "AipOcrSdk.h"
 @interface ViewController ()
-@property (strong, nonatomic) FJCameraView *fjCamera;
-@property (nonatomic, strong) UIButton *takeBtn;
-@property (nonatomic, strong) UIButton *resetBtn;
-@property (nonatomic, strong) UILabel *tipL;
-@property (nonatomic, strong) UIImage *selectedImage;
-@property (nonatomic, strong) UIButton *flashBtn;
+
 @end
 
-@implementation ViewController
-
-- (void)viewDidLoad {
+@implementation ViewController{
+    // 默认的识别成功的回调
+    void (^_successHandler)(id);
+    // 默认的识别失败的回调
+    void (^_failHandler)(NSError *);
+}
+- (void)viewDidLoad{
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-    self.view.backgroundColor = [UIColor blackColor];
-
-    
-    self.fjCamera = [FJCameraView new];
-    [self.view insertSubview:self.fjCamera atIndex:0];
-    [self.fjCamera mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.centerY.equalTo(self.view);
-        make.left.mas_equalTo(60);
-        make.size.mas_equalTo(CGSizeMake(430, 300));
-        
+    UIButton *btn = [UIButton new];
+    [self.view addSubview:btn];
+    [btn mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.mas_equalTo(100);
+        make.size.mas_equalTo(CGSizeMake(100, 50));
+        make.centerX.equalTo(self.view);
     }];
-
-
-    // 拍摄按钮
-    _takeBtn = [UIButton new];
-    [self.view addSubview:_takeBtn];
-    [_takeBtn setTitle:@"拍摄" forState:UIControlStateNormal];
-    [_takeBtn setBackgroundColor:[UIColor grayColor]];
-    _takeBtn.layer.borderWidth = 1;
-    _takeBtn.layer.borderColor = [UIColor whiteColor].CGColor;
-    _takeBtn.layer.cornerRadius = 50;
-    [_takeBtn mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.right.mas_offset(-30);
-        make.centerY.equalTo(self.view);
-        make.width.height.mas_equalTo(100);
-    }];
-    [_takeBtn addTarget:self action:@selector(takePhoto:) forControlEvents:UIControlEventTouchUpInside];
+    [btn setTitle:@"打开相机" forState:UIControlStateNormal];
+    [btn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    btn.layer.borderWidth = 1;
+    btn.layer.borderColor = [UIColor blackColor].CGColor;
+    btn.layer.cornerRadius = 5;
+    [btn addTarget:self action:@selector(clickBtn:) forControlEvents:UIControlEventTouchUpInside];
     
-   // 闪光灯
-      _flashBtn = [UIButton new];
-      [self.view addSubview:_flashBtn];
-      [_flashBtn setTitle:[self transferFlashTitle:[self.fjCamera getCaptureFlashMode]] forState:UIControlStateNormal];
-      [_flashBtn mas_makeConstraints:^(MASConstraintMaker *make) {
-          make.bottom.equalTo(_takeBtn.mas_top).offset(-10);
-          make.centerX.equalTo(_takeBtn);
+    UIButton *btn2 = [UIButton new];
+      [self.view addSubview:btn2];
+      [btn2 mas_makeConstraints:^(MASConstraintMaker *make) {
+          make.top.equalTo(btn.mas_bottom).offset(10);
+          make.centerX.equalTo(self.view);
       }];
-    [_flashBtn addTarget:self action:@selector(clickFlash:) forControlEvents:UIControlEventTouchUpInside];
+      [btn2 setTitle:@"baidu" forState:UIControlStateNormal];
+      [btn2 setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+      [btn2 addTarget:self action:@selector(baiduOcr) forControlEvents:UIControlEventTouchUpInside];
     
-    // 重新拍摄按钮
-    _resetBtn = [UIButton new];
-    [self.view addSubview:_resetBtn];
-    [_resetBtn setHidden:YES];
-    [_resetBtn setTitle:@"重新拍摄" forState:UIControlStateNormal];
-    [_resetBtn mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(_takeBtn.mas_bottom).offset(10);
-        make.centerX.equalTo(_takeBtn);
-    }];
-    [_resetBtn addTarget:self action:@selector(resetPhoto:) forControlEvents:UIControlEventTouchUpInside];
-    
-    
-    // 提示框
-    _tipL = [UILabel new];
-    [self.view addSubview:_tipL];
-    _tipL.textColor = [UIColor whiteColor];
-    _tipL.font = [UIFont systemFontOfSize:14];
-    _tipL.text = @"请放正凭证，并调整好光线";
-    [_tipL mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.mas_equalTo(0);
-        make.bottom.equalTo(self.fjCamera.mas_top);
-        make.centerX.equalTo(self.fjCamera);
-    }];
-    
-}
-// 拍摄
-- (void)takePhoto:(UIButton *)btn{
-    if (self.selectedImage) {
-        NSLog(@"完成");
-    }else{
-        __weak typeof(self) WeakSelf = self;
-        [self.fjCamera takePhoto:^(UIImage *img) {
-            NSLog(@"%@",img);
-            [WeakSelf.resetBtn setHidden:NO];
-            [btn setTitle:@"完成" forState:UIControlStateNormal];
-            WeakSelf.tipL.text = @"拍摄成功";
-            WeakSelf.selectedImage = img;
-            [WeakSelf.flashBtn setHidden:YES];
-        }];
-    }
+    [[AipOcrService shardService] authWithAK:@"w1KcbGon6nkGFUAjMci3qUzo" andSK:@"XtUZU5adurv9acuAHX2pKWbNL0GRM1tR"];
+    [self configCallback];
     
 }
 
-// 重新拍摄
-- (void)resetPhoto:(UIButton *)btn{
-    [self.fjCamera restart];
-    [self.resetBtn setHidden:YES];
-    [_takeBtn setTitle:@"拍摄" forState:UIControlStateNormal];
-    self.tipL.text = @"请放正凭证，并调整好光线";
-    self.selectedImage = nil;
-    [self.flashBtn setHidden:NO];
+- (void)baiduOcr{
+    UIViewController * vc = [AipGeneralVC ViewControllerWithHandler:^(UIImage *image) {
+
+        [[AipOcrService shardService] detectVehicleLicenseFromImage:image
+                                      withOptions:nil
+                                                     successHandler:self->_successHandler
+                                                        failHandler:self->_failHandler];
+    }];
+    [self presentViewController:vc animated:YES completion:nil];
 }
 
-// 切换闪光灯
-- (void)clickFlash:(UIButton *)btn{
-    FJCaptureFlashMode flashModel = [self.fjCamera getCaptureFlashMode];
-    FJCaptureFlashMode current = flashModel;
-    switch (flashModel) {
-        case 0:
-            current = 1;
-            break;
-        case 1:
-            current = 2;
-            break;
+- (void)clickBtn:(UIButton *)btn{
+    DemoCamerVC *vc = [[DemoCamerVC alloc]init];
+    [self presentViewController:vc animated:YES completion:nil];
+}
+
+- (void)configCallback {
+    __weak typeof(self) weakSelf = self;
+    
+    // 这是默认的识别成功的回调
+    _successHandler = ^(id result){
+        NSLog(@"%@", result);
+        NSString *title = @"识别结果";
+        NSMutableString *message = [NSMutableString string];
         
-        case 2:
-            current = 0;
-            break;
+        if(result[@"words_result"]){
+            if([result[@"words_result"] isKindOfClass:[NSDictionary class]]){
+                [result[@"words_result"] enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
+                    if([obj isKindOfClass:[NSDictionary class]] && [obj objectForKey:@"words"]){
+                        [message appendFormat:@"%@: %@\n", key, obj[@"words"]];
+                    }else{
+                        [message appendFormat:@"%@: %@\n", key, obj];
+                    }
+                    
+                }];
+            }else if([result[@"words_result"] isKindOfClass:[NSArray class]]){
+                for(NSDictionary *obj in result[@"words_result"]){
+                    if([obj isKindOfClass:[NSDictionary class]] && [obj objectForKey:@"words"]){
+                        [message appendFormat:@"%@\n", obj[@"words"]];
+                    }else{
+                        [message appendFormat:@"%@\n", obj];
+                    }
+                    
+                }
+            }
             
-        default:
-            break;
-    }
-    [btn setTitle:[self transferFlashTitle:current] forState:UIControlStateNormal];
-    [self.fjCamera switchLight:current];
+        }else{
+            [message appendFormat:@"%@", result];
+        }
+        
+        [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:title message:message delegate:weakSelf cancelButtonTitle:@"确定" otherButtonTitles:nil];
+            [alertView show];
+        }];
+    };
+    
+    _failHandler = ^(NSError *error){
+        NSLog(@"%@", error);
+        NSString *msg = [NSString stringWithFormat:@"%li:%@", (long)[error code], [error localizedDescription]];
+        [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+            [[[UIAlertView alloc] initWithTitle:@"识别失败" message:msg delegate:weakSelf cancelButtonTitle:@"确定" otherButtonTitles:nil] show];
+        }];
+    };
 }
 
-- (NSString *)transferFlashTitle:(FJCaptureFlashMode)model{
-    NSString *title = @"";
-    switch (model) {
-        case FJCaptureFlashModeOn:
-            title = @"开";
-            break;
-        case FJCaptureFlashModeOff:
-            title = @"关";
-            break;
-        case FJCaptureFlashModeAuto:
-        title = @"自动";
-        break;
-        default:
-            break;
-    }
-    return title;
+
+-(BOOL)shouldAutorotate{
+    return NO;
 }
 
-- (UIInterfaceOrientation)preferredInterfaceOrientationForPresentation {
-    return UIInterfaceOrientationLandscapeRight;
+- (UIInterfaceOrientationMask)supportedInterfaceOrientations
+{
+    return UIInterfaceOrientationMaskPortrait;
 }
 
-- (UIInterfaceOrientationMask)supportedInterfaceOrientations {
-    return UIInterfaceOrientationMaskLandscapeRight;
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
 }
 
+#pragma mark UIAlertViewDelegate
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
 
 @end
