@@ -335,10 +335,10 @@
 		5C4203B72437298F00853506 /* AipOcrSdk */ = {
 			isa = PBXGroup;
 			children = (
+				5C4203C52437298F00853506 /* AipOcrSdk.h */,
+				5C4203C42437298F00853506 /* AipOcrService.h */,
 				5C4203B82437298F00853506 /* AipOcrService.m */,
 				5C4203B92437298F00853506 /* Category */,
-				5C4203C42437298F00853506 /* AipOcrService.h */,
-				5C4203C52437298F00853506 /* AipOcrSdk.h */,
 				5C4203C62437298F00853506 /* View */,
 				5C4203CD2437298F00853506 /* ViewController */,
 			);

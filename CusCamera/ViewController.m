@@ -52,12 +52,13 @@
 }
 
 - (void)baiduOcr{
+
     UIViewController * vc = [AipGeneralVC ViewControllerWithHandler:^(UIImage *image) {
 
         [[AipOcrService shardService] detectVehicleLicenseFromImage:image
                                       withOptions:nil
-                                                     successHandler:self->_successHandler
-                                                        failHandler:self->_failHandler];
+                                                     successHandler:_successHandler
+                                                        failHandler:_failHandler];
     }];
     [self presentViewController:vc animated:YES completion:nil];
 }
